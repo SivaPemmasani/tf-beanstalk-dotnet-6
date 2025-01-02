@@ -27,10 +27,9 @@ jobs:
         pip install awsebcli --upgrade --user
         eb --version
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v2 # More information on this action can be found below in the 'AWS Credentials' section
+      uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
       with:
         role-to-assume: arn:aws:iam::366085906151:role/Aws-GitHub-Integration-Role
-        role-session-name: test
         aws-region: 'us-east-1'
     - name: Deploy to EB
       run: eb deploy App1-dev --staged
