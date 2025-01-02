@@ -35,4 +35,4 @@ jobs:
         role-to-assume: arn:aws:iam::366085906151:role/Aws-GitHub-Integration-Role
         aws-region: 'us-east-1'
     - name: Deploy to EB
-      run: eb deploy App1-dev --staged
+      run: eb list
