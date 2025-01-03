@@ -36,4 +36,5 @@ jobs:
         aws-region: 'us-east-1'
     - name: Deploy to EB
       run: |
-        eb deploy
+        eb init --region "us-east-1" --platform ".NET Core running on 64bit Amazon Linux 2" "first-ebs-app"
+        eb deploy "First-ebs-app-dev" --message "First-ebs-app-dev gitactions Deployment verion-01" --timeout 1200
